@@ -1,24 +1,49 @@
+# 피노키오 만들기
 
-> Open this page at [https://antonsangho.github.io/pinokio/](https://antonsangho.github.io/pinokio/)
+![피노키오](/img/pinocchio.jpg)
 
-## Use as Extension
+## 프로젝트 소개
+이 프로젝트는 거짓말을 하면 코가 길어지는 피노키오를 만드는 활동입니다. 마이크로비트와 네오픽셀 LED를 사용해서 학생들이 쉽고 재미있게 센서와 프로그래밍을 배울 수 있어요.
 
-This repository can be added as an **extension** in MakeCode.
+## 어떻게 작동하나요?
+가변저항을 조작하면 이런 일이 생깁니다:
+1. 가변저항을 얼마나 많이 돌리는지 센서가 감지해요
+2. 당긴 정도에 따라 더 많은 LED에 빨간색 불이 들어와요
+3. 이렇게 피노키오의 코가 점점 길어지는 것처럼 보여요
+4. 코를 다시 원래대로 돌려놓으면 LED도 줄어들어요
 
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/antonsangho/pinokio** and import
+## 이런 걸 배울 수 있어요
+- 마이크로비트가 센서 값을 어떻게 읽는지 배워요
+- 네오픽셀 LED로 빛을 표현하는 방법을 배워요
+- 큰 숫자를 작은 범위로 바꾸는 방법을 배워요
+- 여러 개의 LED를 순서대로 켜고 끄는 방법을 배워요
 
-## Edit this project
+## 미리 알아두면 좋아요
+이 프로젝트를 시작하기 전에 이런 것들을 알아두면 더 재미있게 할 수 있어요:
+- 마이크로비트 
+    - 아날로그 센서 값 읽기
+    - 디지털 핀 사용하기
+- 네오픽셀
+    - LED 색상 설정하기
+    - 여러 개의 LED 제어하기
+- 컴퓨터 생각 방식
+    - 숫자 범위 변환하기
+    - 반복해서 작업하기
 
-To edit this repository in MakeCode.
+## 만들기 순서  
+1. [만들기](/make.md) - 재미있는 피노키오 모양을 만들고 부품 연결하기
+2. [회로연결](/schematic.md) - 마이크로비트와 센서, 네오픽셀 연결하기
+3. [프로그래밍](/code.md) - 마이크로비트에게 일하는 방법 알려주기
 
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **Import** then click on **Import URL**
-* paste **https://github.com/antonsangho/pinokio** and click import
+## 더 재미있게 바꿔볼 수 있어요
+이 프로젝트를 다 만든 후에 이런 것들도 시도해보세요:
+- 코가 길어질 때 소리도 나게 하기
+- LED 색상을 바꿔보기 (빨간색 말고 다른 색으로)
+- 코가 길어질 때 마이크로비트 화면에 표정이 나오게 하기
+- 타이머를 추가해서 일정 시간 동안만 코가 길어지게 만들기
 
-#### Metadata (used for search, rendering)
+## 라이센스 
+이 프로젝트는 공학도서관 라이센스로 제공됩니다.
 
-* for PXT/microbit
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+## 제작자
+공학도서관 - sangho@microschool.kr
