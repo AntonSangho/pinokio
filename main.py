@@ -1,15 +1,18 @@
-Neopixel = 0
+leds_to_light = 0
+analog_value = 0
 strip = neopixel.create(DigitalPin.P1, 8, NeoPixelMode.RGB)
-color = neopixel.colors(NeoPixelColors.RED)
+RED = 16711680
 
 def on_forever():
-    global Neopixel
-    Neopixel = Math.floor(Math.map(pins.analog_read_pin(AnalogPin.P0), 0, 1023, 0, 7))
+    global analog_value, leds_to_light
+    analog_value = pins.analog_read_pin(AnalogPin.P0)
+    leds_to_light = Math.map(analog_value, 0, 1023, 0, 9)
+    leds_to_light = Math.floor(leds_to_light)
     strip.clear()
-    index = 0
-    while index <= Neopixel - 1:
-        strip.set_pixel_color(index, color)
-        index += 1
+    i = 0
+    while i <= leds_to_light - 1:
+        strip.set_pixel_color(i, RED)
+        i += 1
     strip.show()
     basic.pause(100)
 basic.forever(on_forever)
