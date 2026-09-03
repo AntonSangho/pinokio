@@ -8,6 +8,7 @@ basic.forever(function () {
     leds_to_light = Math.map(analog_value, 0, 1023, 0, 9)
     leds_to_light = Math.floor(leds_to_light)
     strip.clear()
+    i = 0
     while (i <= leds_to_light - 1) {
         strip.setPixelColor(i, RED)
         i += 1
