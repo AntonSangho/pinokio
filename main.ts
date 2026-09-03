@@ -2,7 +2,7 @@ let i = 0
 let leds_to_light = 0
 let analog_value = 0
 let strip = neopixel.create(DigitalPin.P1, 8, NeoPixelMode.RGB)
-let RED = 16711680
+let RED = neopixel.colors(NeoPixelColors.Red)
 basic.forever(function () {
     analog_value = pins.analogReadPin(AnalogPin.P0)
     leds_to_light = Math.map(analog_value, 0, 1023, 0, 9)
